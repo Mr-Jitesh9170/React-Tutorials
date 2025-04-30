@@ -4,6 +4,8 @@ import { ReactTutorial } from "./pages/reactTutorials"
 import { WithoutReactMemo } from "./reactMemo/withoutReactMemo"
 import { WithoutUseMemo } from "./useMemo/withoutuseMemo"
 import { WithUseMemo } from "./useMemo/useMemo"
+import { WithUseCallBack } from "./useCallBack/useCallBack"
+import { WithoutUseCallBack } from "./useCallBack/withoutUseCallback"
 
 
 function App() {
@@ -16,6 +18,8 @@ function App() {
           <Route path="/withoutReactMemo" element={<WithoutReactMemo />} />
           <Route path="/withoutUseMemo" element={<WithoutUseMemo />} />
           <Route path="/withUseMemo" element={<WithUseMemo />} />
+          <Route path="/withUseCallback" element={<WithUseCallBack />} />
+          <Route path="/withoutUseCallback" element={<WithoutUseCallBack />} />
         </Route>
       </Routes>
     </BrowserRouter>

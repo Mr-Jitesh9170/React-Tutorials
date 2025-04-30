@@ -1,16 +1,18 @@
-import React, { useState, useCallback } from 'react';
 
-export const WithUseCallBack = () => {
+import React, { useState } from 'react';
+
+
+export const WithoutUseCallBack = () => {
     const [count, setCount] = useState(0);
     const [input, setInput] = useState('');
 
-    const increment = useCallback(() => {
+    const increment = () => {
         setCount((prev) => prev + 1);
-    }, []);
+    };
 
     return (
         <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
-            <h2>useCallback Demo</h2>
+            <h2>No useCallback</h2>
             <p>Count: {count}</p>
             <input
                 type="text"
@@ -26,12 +28,12 @@ export const WithUseCallBack = () => {
                     width: '100%'
                 }}
             />
+
             <Button handleClick={increment} label="Increment Count" />
         </div>
     );
 };
-
-
+ 
 const Button = React.memo(({ handleClick, label }) => {
     console.log(`Rendering button: ${label}`);
     return (
